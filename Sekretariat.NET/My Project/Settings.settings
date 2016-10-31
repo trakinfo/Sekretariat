@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="SysUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sekretariat</Value>
+    </Setting>
+    <Setting Name="DBName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sekretariat</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tomek</Value>
+    </Setting>
+    <Setting Name="SysPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ZSMLyhfzJoYOX9Cddajy4Q==</Value>
+    </Setting>
+    <Setting Name="LastMiejsceUr" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LastMiejsceZam" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PrintContent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">chkFullName</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

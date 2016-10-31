@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52E35B37-A004-40E2-8B42-66132BFBFAE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sekretariat.NET.MainForm</StartupObject>
+    <RootNamespace>Sekretariat.NET</RootNamespace>
+    <AssemblyName>Sekretariat.NET</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>65564640988AA51E20AE0810A1563CB06BBBD860</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Sekretariat.NET_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <ApplicationIcon>sekretariat.NET128.ico</ApplicationIcon>
+    <PublishUrl>D:\VBnet\projects\Sekretariat.NET\Install\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.9.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sekretariat.NET.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sekretariat.NET.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ListviewWithTooltip, Version=1.0.839.39742, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Install\Support\ListviewWithTooltip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=6.2.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Install\Support\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutSekretariat.Designer.vb">
+      <DependentUpon>AboutSekretariat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutSekretariat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="common.vb" />
+    <Compile Include="dlgBelfer.Designer.vb">
+      <DependentUpon>dlgBelfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgBelfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgConnect.Designer.vb">
+      <DependentUpon>dlgConnect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgConnect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgExport.Designer.vb">
+      <DependentUpon>dlgExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgExport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgExportBlyskawica.Designer.vb">
+      <DependentUpon>dlgExportBlyskawica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgExportBlyskawica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgExportInfo.Designer.vb">
+      <DependentUpon>dlgExportInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgExportInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgImportStudents.Designer.vb">
+      <DependentUpon>dlgImportStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgImportStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgKlasa.Designer.vb">
+      <DependentUpon>dlgKlasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgKlasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgKraj.Designer.vb">
+      <DependentUpon>dlgKraj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgKraj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLogin.Designer.vb">
+      <DependentUpon>dlgLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgMiejscowosc.Designer.vb">
+      <DependentUpon>dlgMiejscowosc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgMiejscowosc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgNrDz.Designer.vb">
+      <DependentUpon>dlgNrDz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgNrDz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOrgan.Designer.vb">
+      <DependentUpon>dlgOrgan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgOrgan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPrintPreview.Designer.vb">
+      <DependentUpon>dlgPrintPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPrintPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPrzydzialBelfer.Designer.vb">
+      <DependentUpon>dlgPrzydzialBelfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPrzydzialBelfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPrzydzialKlas.Designer.vb">
+      <DependentUpon>dlgPrzydzialKlas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPrzydzialKlas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgStudent.Designer.vb">
+      <DependentUpon>dlgStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSzkola.Designer.vb">
+      <DependentUpon>dlgSzkola.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgSzkola.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgUser.Designer.vb">
+      <DependentUpon>dlgUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgWoj.Designer.vb">
+      <DependentUpon>dlgWoj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgWoj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgWychowawca.Designer.vb">
+      <DependentUpon>dlgWychowawca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgWychowawca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export.vb" />
+    <Compile Include="frmBelfer.Designer.vb">
+      <DependentUpon>frmBelfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBelfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrugoroczni.Designer.vb">
+      <DependentUpon>frmDrugoroczni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrugoroczni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKlasa.Designer.vb">
+      <DependentUpon>frmKlasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKlasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKraj.Designer.vb">
+      <DependentUpon>frmKraj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKraj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiczbaUczniow.Designer.vb">
+      <DependentUpon>frmLiczbaUczniow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiczbaUczniow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiczbaUczniowByChoice.Designer.vb">
+      <DependentUpon>frmLiczbaUczniowByChoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiczbaUczniowByChoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiczbaUczniowByMiejscowoscByRocznik.Designer.vb">
+      <DependentUpon>frmLiczbaUczniowByMiejscowoscByRocznik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiczbaUczniowByMiejscowoscByRocznik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiczbaUczniowDrugorocznych.Designer.vb">
+      <DependentUpon>frmLiczbaUczniowDrugorocznych.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiczbaUczniowDrugorocznych.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMiejscowosc.Designer.vb">
+      <DependentUpon>frmMiejscowosc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMiejscowosc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrgan.Designer.vb">
+      <DependentUpon>frmOrgan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrgan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromocja.Designer.vb">
+      <DependentUpon>frmPromocja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromocja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrzydzial.Designer.vb">
+      <DependentUpon>frmPrzydzial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrzydzial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrzydzialBelfer.Designer.vb">
+      <DependentUpon>frmPrzydzialBelfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrzydzialBelfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrzydzialKlasDoSzkol.Designer.vb">
+      <DependentUpon>frmPrzydzialKlasDoSzkol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrzydzialKlasDoSzkol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudents.Designer.vb">
+      <DependentUpon>frmStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSzkola.Designer.vb">
+      <DependentUpon>frmSzkola.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSzkola.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWoj.Designer.vb">
+      <DependentUpon>frmWoj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWoj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWychowawca.Designer.vb">
+      <DependentUpon>frmWychowawca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWychowawca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportStudent.vb" />
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PrintReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintVariables.vb" />
+    <Compile Include="prnStudents.Designer.vb">
+      <DependentUpon>prnStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prnStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="SharedVariables.vb" />
+    <Compile Include="ssSekretariat.Designer.vb">
+      <DependentUpon>ssSekretariat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ssSekretariat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutSekretariat.resx">
+      <DependentUpon>AboutSekretariat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgBelfer.resx">
+      <DependentUpon>dlgBelfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgConnect.resx">
+      <DependentUpon>dlgConnect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgExport.resx">
+      <DependentUpon>dlgExport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgExportBlyskawica.resx">
+      <DependentUpon>dlgExportBlyskawica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgExportInfo.resx">
+      <DependentUpon>dlgExportInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgImportStudents.resx">
+      <DependentUpon>dlgImportStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgKlasa.resx">
+      <DependentUpon>dlgKlasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgKraj.resx">
+      <DependentUpon>dlgKraj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLogin.resx">
+      <DependentUpon>dlgLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgMiejscowosc.resx">
+      <DependentUpon>dlgMiejscowosc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgNrDz.resx">
+      <DependentUpon>dlgNrDz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOrgan.resx">
+      <DependentUpon>dlgOrgan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPrintPreview.resx">
+      <DependentUpon>dlgPrintPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPrzydzialBelfer.resx">
+      <DependentUpon>dlgPrzydzialBelfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPrzydzialKlas.resx">
+      <DependentUpon>dlgPrzydzialKlas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgStudent.resx">
+      <DependentUpon>dlgStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgSzkola.resx">
+      <DependentUpon>dlgSzkola.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgUser.resx">
+      <DependentUpon>dlgUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgWoj.resx">
+      <DependentUpon>dlgWoj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgWychowawca.resx">
+      <DependentUpon>dlgWychowawca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBelfer.resx">
+      <DependentUpon>frmBelfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrugoroczni.resx">
+      <DependentUpon>frmDrugoroczni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKlasa.resx">
+      <DependentUpon>frmKlasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKraj.resx">
+      <DependentUpon>frmKraj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiczbaUczniow.resx">
+      <DependentUpon>frmLiczbaUczniow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiczbaUczniowByChoice.resx">
+      <DependentUpon>frmLiczbaUczniowByChoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiczbaUczniowByMiejscowoscByRocznik.resx">
+      <DependentUpon>frmLiczbaUczniowByMiejscowoscByRocznik.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiczbaUczniowDrugorocznych.resx">
+      <DependentUpon>frmLiczbaUczniowDrugorocznych.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMiejscowosc.resx">
+      <DependentUpon>frmMiejscowosc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrgan.resx">
+      <DependentUpon>frmOrgan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromocja.resx">
+      <DependentUpon>frmPromocja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrzydzial.resx">
+      <DependentUpon>frmPrzydzial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrzydzialBelfer.resx">
+      <DependentUpon>frmPrzydzialBelfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrzydzialKlasDoSzkol.resx">
+      <DependentUpon>frmPrzydzialKlasDoSzkol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudents.resx">
+      <DependentUpon>frmStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSzkola.resx">
+      <DependentUpon>frmSzkola.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWoj.resx">
+      <DependentUpon>frmWoj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWychowawca.resx">
+      <DependentUpon>frmWychowawca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prnStudents.resx">
+      <DependentUpon>prnStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ssSekretariat.resx">
+      <DependentUpon>ssSekretariat.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\sekretariat2.png" />
+    <None Include="Resources\sekretariat4.png" />
+    <Content Include="Sekretariat.NET.ico" />
+    <Content Include="sekretariat.NET128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
